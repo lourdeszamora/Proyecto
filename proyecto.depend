@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1423438470 source:c:\users\lourdes zamora\desktop\01_hello_sdl\01_hello_sdl.cpp
+	<SDL.h>
+	<stdio.h>
+
