@@ -3,3 +3,17 @@
 	<SDL.h>
 	<stdio.h>
 
+1457566424 source:c:\users\kurisu\documents\proyecto\main.cpp
+	<stdio.h>
+	<allegro5/allegro.h>
+
+1457568535 source:c:\users\kurisu\documents\proyecto\hitbox.cpp
+	"Hitbox.h"
+
+1457568535 c:\users\kurisu\documents\proyecto\hitbox.h
+
+1457568552 source:c:\users\kurisu\documents\proyecto\hurtbox.cpp
+	"HurtBox.h"
+
+1457568552 c:\users\kurisu\documents\proyecto\hurtbox.h
+
