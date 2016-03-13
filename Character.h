@@ -7,8 +7,8 @@ class Character
 {
     public:
         int attack,life,x,y;
-        string type;
-        Character(int attack, int life, int x, int y, string type);
+        char type;
+        Character(int attack, int life, int x, int y, char type);
         virtual ~Character();
     protected:
     private:
