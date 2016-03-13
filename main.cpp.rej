@@ -1,0 +1,10 @@
+diff a/main.cpp b/main.cpp	(rejected hunks)
+@@ -4,6 +4,7 @@
+ 
+ int main()
+ {
+-    cout << "Hello world!" << endl;
++    cout << "Hello world of calculus!" << endl;
++    cout << "Hello tia ruth" << endl;
+     return 0;
+ }
