@@ -1,11 +1,9 @@
 #include "Hitbox.h"
 
-Hitbox::Hitbox()
-{
-    //ctor
+Hitbox::Hitbox(){
+    
 }
 
-Hitbox::~Hitbox()
-{
-    //dtor
+Hitbox::~Hitbox(){
+    
 }

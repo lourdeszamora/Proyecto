@@ -1,17 +1,15 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
+#pragma once
 #include <string>
 
+using std::string;
 
-class Character
-{
-    public:
-        int attack,life,x,y;
-        char type;
-        Character(int attack, int life, int x, int y, char type);
-        virtual ~Character();
+
+class Character{
+	int attack,life,x,y;
+    string type;
+public:
+    Character(int attack, int life, int x, int y, string type);
+    ~Character();
     protected:
     private:
 };
-
-#endif // CHARACTER_H

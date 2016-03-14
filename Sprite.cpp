@@ -1,11 +1,9 @@
 #include "Sprite.h"
 
-Sprite::Sprite()
-{
-    //ctor
+Sprite::Sprite(){
+
 }
 
-Sprite::~Sprite()
-{
-    //dtor
+Sprite::~Sprite(){
+ 
 }

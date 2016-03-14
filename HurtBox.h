@@ -1,14 +1,10 @@
-#ifndef HURTBOX_H
-#define HURTBOX_H
+#pragma once
 
+class HurtBox{
+public:
+    HurtBox();
+    ~HurtBox();
+protected:
 
-class HurtBox
-{
-    public:
-        HurtBox();
-        virtual ~HurtBox();
-    protected:
-    private:
+private:
 };
-
-#endif // HURTBOX_H

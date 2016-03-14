@@ -1,11 +1,9 @@
 #include "HurtBox.h"
 
-HurtBox::HurtBox()
-{
-    //ctor
+HurtBox::HurtBox(){
+ 
 }
 
-HurtBox::~HurtBox()
-{
-    //dtor
+HurtBox::~HurtBox(){
+   
 }
