@@ -3,7 +3,7 @@
 class Hitbox{
 public:
 	Hitbox();
-	~Hitbox();
+	virtual ~Hitbox();
     protected:
     private:
 };
