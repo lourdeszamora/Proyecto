@@ -4,7 +4,7 @@
 class Sprite{
 public:
     Sprite();
-    ~Sprite();
+    virtual ~Sprite();
     protected:
     private:
 };

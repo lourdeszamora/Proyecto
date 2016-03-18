@@ -3,7 +3,7 @@
 class HurtBox{
 public:
     HurtBox();
-    ~HurtBox();
+    virtual ~HurtBox();
 protected:
 
 private:

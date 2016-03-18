@@ -12,7 +12,7 @@ class Character{
     string type;
 public:
     Character(int attack, int life, int x, int y, string type);
-    ~Character();
+    virtual ~Character();
     virtual void logic();
     virtual void draw();
     protected:
