@@ -3,26 +3,26 @@
 	<SDL.h>
 	<stdio.h>
 
-1457829233 source:c:\users\kurisu\documents\proyecto\main.cpp
+1458941021 source:c:\users\kurisu\documents\proyecto\main.cpp
 	<stdio.h>
 	<allegro5/allegro.h>
 
 1457916566 source:c:\users\kurisu\documents\proyecto\hitbox.cpp
 	"Hitbox.h"
 
-1457916566 c:\users\kurisu\documents\proyecto\hitbox.h
+1458302758 c:\users\kurisu\documents\proyecto\hitbox.h
 
 1457916566 source:c:\users\kurisu\documents\proyecto\hurtbox.cpp
 	"HurtBox.h"
 
-1457916566 c:\users\kurisu\documents\proyecto\hurtbox.h
+1458302758 c:\users\kurisu\documents\proyecto\hurtbox.h
 
 1457916566 source:c:\users\kurisu\documents\proyecto\character.cpp
 	"Character.h"
 	<string>
 	<cstring>
 
-1457916566 c:\users\kurisu\documents\proyecto\character.h
+1458302758 c:\users\kurisu\documents\proyecto\character.h
 	<string>
 	<iostream>
 	<map>
@@ -31,5 +31,13 @@
 1457916566 source:c:\users\kurisu\documents\proyecto\sprite.cpp
 	"Sprite.h"
 
-1457916567 c:\users\kurisu\documents\proyecto\sprite.h
+1458302758 c:\users\kurisu\documents\proyecto\sprite.h
+
+1458940876 source:c:\users\kurisu\documents\proyecto\level.cpp
+	"Level.h"
+	<string>
+	<cstring>
+
+1458940735 c:\users\kurisu\documents\proyecto\level.h
+	<string>
 
