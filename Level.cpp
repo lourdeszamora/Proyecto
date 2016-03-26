@@ -18,7 +18,7 @@ void Level::wave(){
 
 }
 
-void Level::gameOver(){
+void Level::gameOver(ALLEGRO_DISPLAY *display){
 
 }
 
