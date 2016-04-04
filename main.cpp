@@ -7,10 +7,117 @@
 
 #include "Menu.h"
 #include "Level.h"
+#include "Player.h"
+#include <fstream>
+#include <iostream>
+#include <list>
 
+using namespace std;
 
 enum LevelD { MENUD, LEVEL1D, LEVEL2D, TUTORIALD};
 
+int tamano_registro=44;
+//REVISAR ESTA FUNCION
+Player searchUser (Player jugador)
+    {
+        ifstream leer("Jugadores");
+        leer.seekg(0,ios::end);
+        int tam=leer.tellg();
+        leer.seekg(0);
+        char usern[20];
+        char password[20];
+        while (leer.tellg()<tam)
+        {
+            leer.read(usern,20);
+            leer.read(password,20);
+            leer.seekg(4,ios::cur);
+            if(usern==jugador.username){
+                return Player(usern,password);
+            }
+        }
+        leer.close();
+        return Player((char*)"",(char*)"");
+    }
+
+    bool crearUsuario (Player jugador, int pos)
+    {
+
+        if(searchUser(jugador).username == "")
+        {
+            ofstream guardar("Jugadores", ios::in);
+            if(!guardar.is_open())
+            {
+                guardar.open("Jugadores");
+            }
+            guardar.seekp(pos*tamano_registro);
+            guardar.write(jugador.username.c_str(),20);
+            guardar.write(jugador.password.c_str(),20);
+            guardar.write((char*)&jugador.pts,4);
+            guardar.close();
+            return true;
+        }
+        else
+            return false;
+    }
+
+    bool iniciarSesion (Player jugador)
+    {
+        if(searchUser(jugador).username == jugador.username)
+        {
+            return true;
+        }
+
+        else
+            return false;
+    }
+//http://es.tldp.org/Tutoriales/doc-programacion-algoritmos-ordenacion/alg_orden.pdf
+    void intercambiar (int * A, int i, int j)
+    {
+        int tmp = A[i];
+        A[i] = A[j];
+        A[j] = tmp;
+    }
+    void ordenacion_seleccion (int * A, int N)
+    {
+        int i, j, k;
+        for (i = 0; i < N - 1; i++)
+        {
+            for (k = i, j = i + 1; j < N; j++)
+                if (A[j] < A[k])
+                    k = j;
+                    if (k != i)
+                        intercambiar (A, i, k);
+        }
+    }
+
+
+    list<int> ranking ()
+    {
+        ifstream leer("Jugadores");
+        leer.seekg(0,ios::end);
+        int tam=leer.tellg();
+        leer.seekg(0);
+        int contador_registros=0;
+        int puntos;
+        int cant_registros = tam/tamano_registro;
+        int *ranking=new int[cant_registros];
+        list<int> ordenado;
+        for(int i=0;i<cant_registros;i++)
+        {
+            leer.seekg(40, ios::cur);
+            leer.read((char*)&puntos,4);
+            ranking[i] = puntos;
+
+        }
+        leer.close();
+        ordenacion_seleccion(ranking,cant_registros);
+        for(int i=0;i<cant_registros;i++)
+        {
+            ordenado.push_back(ranking[i]);
+        }
+        ordenado.reverse();
+        return ordenado;
+    }
 
 
 int allegro_init(){
@@ -52,6 +159,7 @@ int allegro_init(){
 Menu *m= new Menu();
 Level *level1= new Level(3,1,0);
 Level *tutorial= new Level(0,0,0);
+
 //Level *level2= new Level();
 //Level *level3= new Level();
 //Level *level4= new Level();
@@ -73,6 +181,10 @@ int main()
 
 
     bool Exit = false, Playing = false;
+    Player jug("A","123");
+    jug.pts=950;
+    bool sepudo = crearUsuario(jug,0);
+    list<int> mi_lista = ranking();
 
     //inicializar allegro
 
@@ -160,6 +272,9 @@ int main()
                     select=3;
                 break;
                 case 2:
+                    for(list<int>::iterator temp=mi_lista.begin(); temp!=mi_lista.end();temp++){
+                        cout<<"Puntuacion de Usuario: "<<*temp<<endl;
+                    }
                     Exit = true;
                 break;
                 case 3:
