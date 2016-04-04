@@ -15,7 +15,7 @@ class Level
         int plants;
         int defeated;
         Level(int zombies, int plants, int defeated);
-        void addBackground(ALLEGRO_BITMAP *background, int selected);
+        void addBackground(ALLEGRO_DISPLAY *Screen,ALLEGRO_BITMAP *background, int selected);
         virtual ~Level();
     protected:
     private:

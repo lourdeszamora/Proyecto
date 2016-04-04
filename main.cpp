@@ -52,7 +52,7 @@ Level *level1= new Level(3,1,0);
 enum LEVELD{ MENUD,LEVEL1D,LEVEL2D};
 int main()
 {
-    ALLEGRO_DISPLAY *Screen = NULL, *Level1 = NULL;
+    ALLEGRO_DISPLAY *Screen = NULL;
     ALLEGRO_EVENT_QUEUE *EventQueue = NULL;
     ALLEGRO_EVENT Event;
     ALLEGRO_BITMAP *Background=NULL;
@@ -105,7 +105,7 @@ int main()
         if(display==MENUD)
             m->addBackground(Background,select);
         else
-            level1->addBackground(Background,0);
+            level1->addBackground(Screen,Background,0);
 
 
         al_flip_display();
@@ -127,9 +127,7 @@ int main()
                 case 0:
                     Playing = true;
                     display=LEVEL1D;
-                    al_destroy_display(Screen);
-                    Level1 = al_create_display(1400, 600);
-                    level1->addBackground(Background,1);
+                    level1->addBackground(Screen,Background,1);
                 break;
                 case 1:
                 break;

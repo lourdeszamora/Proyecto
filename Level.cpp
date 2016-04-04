@@ -4,7 +4,13 @@ Level::Level(int zombies, int plants, int defeated)
 {
     //ctor
 }
-void Level::addBackground(ALLEGRO_BITMAP *background, int selected){
+void Level::addBackground(ALLEGRO_DISPLAY *Screen,ALLEGRO_BITMAP *background, int selected){
+
+    if(selected){
+        al_destroy_display(Screen);
+        Screen = al_create_display(1400, 600);
+    }
+
 
     switch(selected){
         case 0:
