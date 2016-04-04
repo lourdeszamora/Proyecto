@@ -1,37 +1,30 @@
 #include "Menu.h"
 
-Menu::Menu(){
-
-    Menu::menu_exit=al_load_bitmap("menuexit.png");
-    Menu::menu_start=al_load_bitmap("menustart.png");
-    Menu::menu_tutorial=al_load_bitmap("menututorial.png");
-
-
+Menu::Menu()
+{
+    //ctor
 }
 
-ALLEGRO_BITMAP* Menu::mostrar(int selected){
+void Menu::addBackground(ALLEGRO_BITMAP *background, int selected){
 
-    switch(selected){
-            case 0:
-               return Menu::menu_start;
+     switch(selected){
+        case 0:
+            background=al_load_bitmap("menustart.png");
 
-            break;
-            case 1:
-                 return Menu::menu_tutorial;
-                //al_clear_to_color(al_map_rgb_f(0, 0, 0));
-                //return al_load_bitmap("menututorial.png");
-            break;
-            case 2:
-                 return Menu::menu_exit;
-                //return al_load_bitmap("menuexit.png");
-            break;
-            default:
-                return false;
-            break;
+        break;
+        case 1:
+            background=al_load_bitmap("menututorial.png");
 
-            }
+        break;
+        case 2:
+            background=al_load_bitmap("menuexit.png");
+        break;
+    }
+            al_draw_bitmap(background, 0, 0, 0);
 }
-Menu::~Menu(){
 
-
+Menu::~Menu()
+{
+    //dtor
 }
+
