@@ -8,7 +8,8 @@
 #include "Menu.h"
 #include "Level.h"
 
-
+enum Level { MENUD, LEVEL1D, LEVEL2D };
+Level display = MENUD;
 
 int allegro_init(){
 
@@ -98,15 +99,16 @@ int main()
 
     al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP,NULL);
 
-   // Background=al_load_bitmap("menustart.png");
     while(Exit == false)
     {
-  /*      if(!m->addBackground(Background,select)){
-            al_show_native_message_box(NULL, "Error!", "Error al seleccionar el background.", 0, 0, ALLEGRO_MESSAGEBOX_ERROR);
-            return -1;
-        }*/
 
-        m->addBackground(Background,select);
+        if(diplay==MENUD)
+            m->addBackground(Background,select);
+        else if(diplay == LEVEL1D){
+            level1->addBackground(Background,1);
+        }
+
+
 
 
         al_flip_display();
@@ -126,7 +128,7 @@ int main()
             if (Event.keyboard.keycode == ALLEGRO_KEY_ENTER){
                 switch(select){
                 case 0:
-                    level1->addBackground(Background,1);
+                    diplay = LEVEL1D;
                 break;
                 case 1:
                 break;
