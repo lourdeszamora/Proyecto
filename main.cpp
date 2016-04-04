@@ -6,6 +6,7 @@
 #include <allegro5/allegro_native_dialog.h>
 
 #include "Menu.h"
+#include "Level.h"
 
 
 
@@ -42,6 +43,12 @@ int allegro_init(){
 
 }
 Menu *m= new Menu();
+Level *level1= new Level(3,1,0);
+//Level *level2= new Level();
+//Level *level3= new Level();
+//Level *level4= new Level();
+//Level *level5= new Level();
+//Level *level6= new Level();
 int main()
 {
     ALLEGRO_DISPLAY *Screen = NULL;
@@ -117,7 +124,16 @@ int main()
                 select++;
             }
             if (Event.keyboard.keycode == ALLEGRO_KEY_ENTER){
-                select++;
+                switch(select){
+                case 0:
+                    level1->addBackground(Background,1);
+                break;
+                case 1:
+                break;
+                case 2:
+                    Exit = true;
+                break;
+                }
             }
         }
         if (select>2)

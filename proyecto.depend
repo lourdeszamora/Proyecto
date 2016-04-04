@@ -86,3 +86,13 @@
 
 1459761332 c:\users\kurisu\documents\proyecto\sprite.h
 
+1459764195 source:c:\users\kurisu\documents\proyecto\level.cpp
+	"Level.h"
+
+1459764103 c:\users\kurisu\documents\proyecto\level.h
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_native_dialog.h>
+
