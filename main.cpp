@@ -116,6 +116,9 @@ int main()
             if (Event.keyboard.keycode == ALLEGRO_KEY_DOWN){
                 select++;
             }
+            if (Event.keyboard.keycode == ALLEGRO_KEY_ENTER){
+                select++;
+            }
         }
         if (select>2)
             select=0;
