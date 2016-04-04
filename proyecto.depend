@@ -5,8 +5,13 @@
 
 1423438470 D
 
-1459607797 source:c:\users\lourdes zamora\documents\proyecto\main.cpp
+1459760932 source:c:\users\lourdes zamora\documents\proyecto\main.cpp
 	<stdio.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_native_dialog.h>
 	"Menu.h"
 
 1457393981 allegro.h>
@@ -36,21 +41,21 @@
 
 1457568552 97150377bd5328578f711acf4d16bf56f7e4a
 
-1458969702 source:c:\users\lourdes zamora\documents\proyecto\character.cpp
+1459760932 source:c:\users\lourdes zamora\documents\proyecto\character.cpp
 	"Character.h"
 
-1458969695 c:\users\lourdes zamora\documents\proyecto\character.h
+1459760932 c:\users\lourdes zamora\documents\proyecto\character.h
 	<string>
 
-1457835795 source:c:\users\lourdes zamora\documents\proyecto\hitbox.cpp
+1459760903 source:c:\users\lourdes zamora\documents\proyecto\hitbox.cpp
 	"Hitbox.h"
 
-1457835795 c:\users\lourdes zamora\documents\proyecto\hitbox.h
+1459760903 c:\users\lourdes zamora\documents\proyecto\hitbox.h
 
-1457835795 source:c:\users\lourdes zamora\documents\proyecto\hurtbox.cpp
+1459760903 source:c:\users\lourdes zamora\documents\proyecto\hurtbox.cpp
 	"HurtBox.h"
 
-1457835795 c:\users\lourdes zamora\documents\proyecto\hurtbox.h
+1459760903 c:\users\lourdes zamora\documents\proyecto\hurtbox.h
 
 1457835795 source:c:\users\lourdes zamora\documents\proyecto\sprite.cpp
 	"Sprite.h"
@@ -60,10 +65,12 @@
 1459202736 source:c:\users\lourdes zamora\documents\proyecto\menu.cpp
 	"Menu.h"
 
-1459202289 c:\users\lourdes zamora\documents\proyecto\menu.h
+1459761238 c:\users\lourdes zamora\documents\proyecto\menu.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
-	<iostream>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_native_dialog.h>
 
 1459761330 source:c:\users\kurisu\documents\proyecto\character.cpp
 	"Character.h"
