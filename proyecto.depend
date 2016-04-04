@@ -3,6 +3,7 @@
 	<SDL.h>
 	<stdio.h>
 
+
 1423438470 D
 
 1459607797 source:c:\users\lourdes zamora\documents\proyecto\main.cpp
@@ -82,4 +83,51 @@
 	"Sprite.h"
 
 1459756153 c:\users\kurisu\documents\proyecto\sprite.h
+=======
+1459744897 source:c:\users\kurisu\documents\proyecto\main.cpp
+	<stdio.h>
+	<allegro5/allegro.h>
+
+1459745353 source:c:\users\kurisu\documents\proyecto\hitbox.cpp
+	"Hitbox.h"
+
+1459745353 c:\users\kurisu\documents\proyecto\hitbox.h
+
+1459745353 source:c:\users\kurisu\documents\proyecto\hurtbox.cpp
+	"HurtBox.h"
+
+1459745353 c:\users\kurisu\documents\proyecto\hurtbox.h
+
+1459752480 source:c:\users\kurisu\documents\proyecto\character.cpp
+	"Character.h"
+	<string>
+	<cstring>
+
+1459754703 c:\users\kurisu\documents\proyecto\character.h
+	<string>
+	<iostream>
+	<map>
+	<fstream>
+
+1459745353 source:c:\users\kurisu\documents\proyecto\sprite.cpp
+	"Sprite.h"
+
+1459745354 c:\users\kurisu\documents\proyecto\sprite.h
+
+1459747463 source:c:\users\kurisu\documents\proyecto\level.cpp
+	"Level.h"
+	<string>
+	<cstring>
+
+1459747500 c:\users\kurisu\documents\proyecto\level.h
+	<stdio.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_native_dialog.h>
+	<string>
+
+1459752494 source:c:\users\kurisu\documents\proyecto\zombie.cpp
+	"Zombie.h"
+
+1459753787 c:\users\kurisu\documents\proyecto\zombie.h
+	"Character.h"
 

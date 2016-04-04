@@ -1,14 +1,12 @@
-#ifndef SPRITE_H
-#define SPRITE_H
+#pragma once
 
 
-class Sprite
-{
-    public:
-        Sprite();
-        virtual ~Sprite();
+class Sprite{
+public:
+    Sprite();
+    virtual ~Sprite();
     protected:
     private:
 };
 
-#endif // SPRITE_H
+

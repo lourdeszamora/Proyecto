@@ -38,10 +38,19 @@
 		<Unit filename="Hitbox.h" />
 		<Unit filename="HurtBox.cpp" />
 		<Unit filename="HurtBox.h" />
+<<<<<<< HEAD
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
 		<Unit filename="Sprite.cpp" />
 		<Unit filename="Sprite.h" />
+=======
+		<Unit filename="Level.cpp" />
+		<Unit filename="Level.h" />
+		<Unit filename="Sprite.cpp" />
+		<Unit filename="Sprite.h" />
+		<Unit filename="Zombie.cpp" />
+		<Unit filename="Zombie.h" />
+>>>>>>> 1a704a9f858f1590d5e2765e2ed534c54e38cd36
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

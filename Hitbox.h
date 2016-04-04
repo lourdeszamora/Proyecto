@@ -1,14 +1,9 @@
-#ifndef HITBOX_H
-#define HITBOX_H
+#pragma once
 
-
-class Hitbox
-{
-    public:
-        Hitbox();
-        virtual ~Hitbox();
+class Hitbox{
+public:
+	Hitbox();
+	virtual ~Hitbox();
     protected:
     private:
 };
-
-#endif // HITBOX_H
