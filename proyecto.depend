@@ -5,7 +5,7 @@
 
 1423438470 D
 
-1459774829 source:c:\users\lourdes zamora\documents\proyecto\main.cpp
+1459792080 source:c:\users\lourdes zamora\documents\proyecto\main.cpp
 	<stdio.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -17,7 +17,7 @@
 
 1457393981 allegro.h>
 
-1459763205 source:c:\users\kurisu\documents\proyecto\main.cpp
+1459776336 source:c:\users\kurisu\documents\proyecto\main.cpp
 	<stdio.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -25,6 +25,7 @@
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_native_dialog.h>
 	"Menu.h"
+	"Level.h"
 
 1457829233 08c03ff39c9d5cb26b222f427cb64399fcee5
 	<stdio.h>
@@ -42,10 +43,10 @@
 
 1457568552 97150377bd5328578f711acf4d16bf56f7e4a
 
-1459760932 source:c:\users\lourdes zamora\documents\proyecto\character.cpp
+1459784817 source:c:\users\lourdes zamora\documents\proyecto\character.cpp
 	"Character.h"
 
-1459760932 c:\users\lourdes zamora\documents\proyecto\character.h
+1459784814 c:\users\lourdes zamora\documents\proyecto\character.h
 	<string>
 
 1459760903 source:c:\users\lourdes zamora\documents\proyecto\hitbox.cpp
@@ -104,13 +105,25 @@
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_native_dialog.h>
 
-1459774829 c:\users\lourdes zamora\documents\proyecto\level.h
+1459789393 c:\users\lourdes zamora\documents\proyecto\level.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_native_dialog.h>
 
-1459774829 source:c:\users\lourdes zamora\documents\proyecto\level.cpp
+1459790879 source:c:\users\lourdes zamora\documents\proyecto\level.cpp
 	"Level.h"
+
+1459790550 source:c:\users\lourdes zamora\documents\proyecto\zombie.cpp
+	"Zombie.h"
+
+1459789193 c:\users\lourdes zamora\documents\proyecto\zombie.h
+	<stdio.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	<allegro5/allegro_native_dialog.h>
+	"Character.h"
 

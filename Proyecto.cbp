@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../Proyecto" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../Proyecto" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,10 +40,14 @@
 		<Unit filename="Hitbox.h" />
 		<Unit filename="HurtBox.cpp" />
 		<Unit filename="HurtBox.h" />
+		<Unit filename="Level.cpp" />
+		<Unit filename="Level.h" />
 		<Unit filename="Menu.cpp" />
 		<Unit filename="Menu.h" />
 		<Unit filename="Sprite.cpp" />
 		<Unit filename="Sprite.h" />
+		<Unit filename="Zombie.cpp" />
+		<Unit filename="Zombie.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
