@@ -8,7 +8,10 @@
 #include "Menu.h"
 #include "Level.h"
 
-using namespace std;
+
+enum LevelD { MENUD, LEVEL1D, LEVEL2D, TUTORIALD};
+
+
 
 int allegro_init(){
 
@@ -38,27 +41,37 @@ int allegro_init(){
         fprintf(stderr, "failed to reserve samples!\n");
         return -1;
     }
+    if(!al_install_mouse()) {
+		printf("Error installing mouse.\n");
+		return -1;
+	}
 
     return 1;
 
 }
 Menu *m= new Menu();
 Level *level1= new Level(3,1,0);
+Level *tutorial= new Level(0,0,0);
 //Level *level2= new Level();
 //Level *level3= new Level();
 //Level *level4= new Level();
 //Level *level5= new Level();
 //Level *level6= new Level();
-enum LEVELD{ MENUD,LEVEL1D,LEVEL2D};
+
 int main()
 {
+    LevelD display = MENUD;
     ALLEGRO_DISPLAY *Screen = NULL;
     ALLEGRO_EVENT_QUEUE *EventQueue = NULL;
     ALLEGRO_EVENT Event;
-    ALLEGRO_BITMAP *Background=NULL;
+    ALLEGRO_BITMAP *Background=NULL, *Tutorial=NULL;
     ALLEGRO_SAMPLE *sample=NULL;
-    LEVELD display= MENUD;
+    ALLEGRO_TIMER *timer;
     int select=0;
+
+    //animaciones
+
+
     bool Exit = false, Playing = false;
 
     //inicializar allegro
@@ -94,18 +107,22 @@ int main()
     al_register_event_source(EventQueue, al_get_display_event_source(Screen));
     al_register_event_source(EventQueue, al_get_keyboard_event_source());
 
+    Tutorial=al_load_bitmap("tutorial.png");
 
 
 
     al_play_sample(sample, 1.0, 0.0,1.0,ALLEGRO_PLAYMODE_LOOP,NULL);
+    timer = al_create_timer(1.0/ 5);
 
-   // Background=al_load_bitmap("menustart.png");
+
     while(Exit == false)
     {
+
         if(display==MENUD)
             m->addBackground(Background,select);
-        else
+        else if(display==LEVEL1D)
             level1->addBackground(Screen,Background,0);
+
 
 
         al_flip_display();
@@ -127,16 +144,42 @@ int main()
                 case 0:
                     Playing = true;
                     display=LEVEL1D;
-                    level1->addBackground(Screen,Background,1);
+                    level1->addBackground(Screen,Background,3);
+                    level1->addEvents(Screen,EventQueue,timer);
                 break;
                 case 1:
+                    Playing = false;
+                    display=TUTORIALD;
+                    al_clear_to_color(al_map_rgb(255, 97, 255));
+                    if(Tutorial==NULL){
+                        printf("No reconoce la imagen .l.");
+                    }
+                    else
+                        al_draw_bitmap(Tutorial,0,0,0);
+
+                    select=3;
                 break;
                 case 2:
                     Exit = true;
                 break;
+                case 3:
+                    printf("Opcion 3");
+                    m->addBackground(Background,0);
+                break;
+
                 }
             }
+
+            if (Event.type == ALLEGRO_EVENT_TIMER)
+            {
+
+
+
+            }
         }
+
+
+
         if (select>2)
             select=0;
         if (select<0)
