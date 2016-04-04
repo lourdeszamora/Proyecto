@@ -1,19 +1,20 @@
-#ifndef MENU_H_INCLUDED
-#define MENU_H_INCLUDED
+#ifndef MENU_H
+#define MENU_H
+
 #include <allegro5/allegro.h>
 #include <allegro5/allegro_image.h>
-#include <iostream>
+#include <allegro5/allegro_audio.h>
+#include <allegro5/allegro_acodec.h>
+#include <allegro5/allegro_native_dialog.h>
+
 class Menu
 {
     public:
         Menu();
+        void addBackground(ALLEGRO_BITMAP *background, int selected);
         virtual ~Menu();
-        ALLEGRO_BITMAP *menu_selected,*menu_start,*menu_exit,*menu_tutorial;
-        ALLEGRO_BITMAP *mostrar(int selected);
     protected:
     private:
 };
 
-
-
-#endif // MENU_H_INCLUDED
+#endif // MENU_H
