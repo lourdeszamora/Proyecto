@@ -8,8 +8,8 @@
 #include "Menu.h"
 #include "Level.h"
 
-enum Level { MENUD, LEVEL1D, LEVEL2D };
-Level display = MENUD;
+enum LevelD { MENUD, LEVEL1D, LEVEL2D };
+
 
 int allegro_init(){
 
@@ -52,6 +52,7 @@ Level *level1= new Level(3,1,0);
 //Level *level6= new Level();
 int main()
 {
+    LevelD display = MENUD;
     ALLEGRO_DISPLAY *Screen = NULL;
     ALLEGRO_EVENT_QUEUE *EventQueue = NULL;
     ALLEGRO_EVENT Event;
@@ -102,9 +103,9 @@ int main()
     while(Exit == false)
     {
 
-        if(diplay==MENUD)
+        if(display==MENUD)
             m->addBackground(Background,select);
-        else if(diplay == LEVEL1D){
+        else if(display == LEVEL1D){
             level1->addBackground(Background,1);
         }
 
@@ -128,7 +129,8 @@ int main()
             if (Event.keyboard.keycode == ALLEGRO_KEY_ENTER){
                 switch(select){
                 case 0:
-                    diplay = LEVEL1D;
+                    display = LEVEL1D;
+                    cout<<display<<endl;
                 break;
                 case 1:
                 break;
