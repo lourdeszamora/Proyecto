@@ -4,7 +4,7 @@
 
 using std::string;
 
-Level::Level(string name, string background, int zombiesDefeated):name(name), background(background), zombiesDefeated(zombiesDefeated)
+Level::Level(string name, string background, int zombiesDefeated, int cantidadZombies):name(name), background(background), zombiesDefeated(zombiesDefeated), cantidadZombies(cantidadZombies)
 {
     //ctor
 }

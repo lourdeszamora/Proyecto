@@ -11,7 +11,8 @@ class Level
     public:
         string name, background;
         int zombiesDefeated;
-        Level(string name, string background, int zombiesDefeated);
+        int cantidadZombies;
+        Level(string name, string background, int zombiesDefeated, int cantidadZombies);
         virtual ~Level();
         virtual void wave();
         virtual void gameOver(ALLEGRO_DISPLAY *display);
