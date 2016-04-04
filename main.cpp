@@ -8,7 +8,7 @@
 #include "Menu.h"
 #include "Level.h"
 
-
+using namespace std;
 
 int allegro_init(){
 
@@ -49,16 +49,17 @@ Level *level1= new Level(3,1,0);
 //Level *level4= new Level();
 //Level *level5= new Level();
 //Level *level6= new Level();
+enum LEVELD{ MENUD,LEVEL1D,LEVEL2D};
 int main()
 {
-    ALLEGRO_DISPLAY *Screen = NULL;
+    ALLEGRO_DISPLAY *Screen = NULL, *Level1 = NULL;
     ALLEGRO_EVENT_QUEUE *EventQueue = NULL;
     ALLEGRO_EVENT Event;
     ALLEGRO_BITMAP *Background=NULL;
     ALLEGRO_SAMPLE *sample=NULL;
-
+    LEVELD display= MENUD;
     int select=0;
-    bool Exit = false;
+    bool Exit = false, Playing = false;
 
     //inicializar allegro
 
@@ -101,19 +102,17 @@ int main()
    // Background=al_load_bitmap("menustart.png");
     while(Exit == false)
     {
-  /*      if(!m->addBackground(Background,select)){
-            al_show_native_message_box(NULL, "Error!", "Error al seleccionar el background.", 0, 0, ALLEGRO_MESSAGEBOX_ERROR);
-            return -1;
-        }*/
-
-        m->addBackground(Background,select);
+        if(display==MENUD)
+            m->addBackground(Background,select);
+        else
+            level1->addBackground(Background,0);
 
 
         al_flip_display();
 
         al_wait_for_event(EventQueue, &Event);
 
-        if(Event.type == ALLEGRO_EVENT_KEY_DOWN)
+        if(!Playing && Event.type == ALLEGRO_EVENT_KEY_DOWN)
         {
             if (Event.keyboard.keycode == ALLEGRO_KEY_UP){
                 select--;
@@ -126,6 +125,10 @@ int main()
             if (Event.keyboard.keycode == ALLEGRO_KEY_ENTER){
                 switch(select){
                 case 0:
+                    Playing = true;
+                    display=LEVEL1D;
+                    al_destroy_display(Screen);
+                    Level1 = al_create_display(1400, 600);
                     level1->addBackground(Background,1);
                 break;
                 case 1:

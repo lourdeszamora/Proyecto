@@ -16,7 +16,7 @@
 
 1457393981 allegro.h>
 
-1459763205 source:c:\users\kurisu\documents\proyecto\main.cpp
+1459776336 source:c:\users\kurisu\documents\proyecto\main.cpp
 	<stdio.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -24,6 +24,7 @@
 	<allegro5/allegro_acodec.h>
 	<allegro5/allegro_native_dialog.h>
 	"Menu.h"
+	"Level.h"
 
 1457829233 08c03ff39c9d5cb26b222f427cb64399fcee5
 	<stdio.h>

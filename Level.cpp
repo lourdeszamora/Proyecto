@@ -5,6 +5,7 @@ Level::Level(int zombies, int plants, int defeated)
     //ctor
 }
 void Level::addBackground(ALLEGRO_BITMAP *background, int selected){
+
     switch(selected){
         case 0:
             background=al_load_bitmap("background.jpg");
