@@ -79,10 +79,10 @@
 1459761330 c:\users\kurisu\documents\proyecto\character.h
 	<string>
 
-1459761487 source:c:\users\kurisu\documents\proyecto\menu.cpp
+1459766167 source:c:\users\kurisu\documents\proyecto\menu.cpp
 	"Menu.h"
 
-1459761487 c:\users\kurisu\documents\proyecto\menu.h
+1459765638 c:\users\kurisu\documents\proyecto\menu.h
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
 	<allegro5/allegro_audio.h>
