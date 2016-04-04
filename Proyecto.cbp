@@ -32,6 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Character.cpp" />
+		<Unit filename="Character.h" />
+		<Unit filename="Hitbox.cpp" />
+		<Unit filename="Hitbox.h" />
+		<Unit filename="HurtBox.cpp" />
+		<Unit filename="HurtBox.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
+		<Unit filename="Sprite.cpp" />
+		<Unit filename="Sprite.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
