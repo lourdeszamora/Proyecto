@@ -11,6 +11,7 @@ class Character{
 	int attack,life,x,y;
     string type;
 public:
+    Character();
     Character(int attack, int life, int x, int y, string type);
     virtual ~Character();
     virtual void logic();

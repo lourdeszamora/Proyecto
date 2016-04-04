@@ -17,12 +17,12 @@
 
 1459745353 c:\users\kurisu\documents\proyecto\hurtbox.h
 
-1459748829 source:c:\users\kurisu\documents\proyecto\character.cpp
+1459752480 source:c:\users\kurisu\documents\proyecto\character.cpp
 	"Character.h"
 	<string>
 	<cstring>
 
-1459749311 c:\users\kurisu\documents\proyecto\character.h
+1459754703 c:\users\kurisu\documents\proyecto\character.h
 	<string>
 	<iostream>
 	<map>
@@ -44,9 +44,9 @@
 	<allegro5/allegro_native_dialog.h>
 	<string>
 
-1459748945 source:c:\users\kurisu\documents\proyecto\zombie.cpp
+1459752494 source:c:\users\kurisu\documents\proyecto\zombie.cpp
 	"Zombie.h"
 
-1459749485 c:\users\kurisu\documents\proyecto\zombie.h
+1459753787 c:\users\kurisu\documents\proyecto\zombie.h
 	"Character.h"
 

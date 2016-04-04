@@ -1,8 +1,7 @@
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
 
-#include <.h>
-
+#include "Character.h"
 
 class Zombie : Character
 {
